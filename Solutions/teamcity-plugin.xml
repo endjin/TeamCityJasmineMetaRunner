@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teamcity-plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:noNamespaceSchemaLocation="urn:shemas-jetbrains-com:teamcity-plugin-v1-xml">
+  <info>
+    <name>JasminePlugin</name>
+    <display-name>Jasmine  Plugin</display-name>
+    <version>snapshot</version>
+    <description>Jasmine is a Behavior Driven Development testing framework for JavaScript.</description>
+    <vendor>
+      <name>Endjin Limited</name>
+      <url>http://endjin.com</url>
+    </vendor>
+  </info>
+  <deployment use-separate-classloader="false"/>
+</teamcity-plugin>
