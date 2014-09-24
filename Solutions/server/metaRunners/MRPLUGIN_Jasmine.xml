@@ -4,8 +4,8 @@
   <settings>
     <parameters>
       <!-- Mandatory Fields -->
-      <param name="teamcity.tool.jasmine.specfile" value="" spec="text description='Spec file to execute' display='normal' label='Jasime Spec File' validationMode='not_empty'" />
       <param name="teamcity.tool.jasmine.jasmineversion" value="n/a" spec="select data_1='n/a' data_2='1.3' data_3='2.0' label_2='Jasime v1.3' label_3='Jasime v2.0' description='Select the version of Jasime.' display='normal' label='Jasime Version'" />
+      <param name="teamcity.tool.jasmine.specfile" value="" spec="text description='Spec file to execute' display='normal' label='Jasime Spec File' validationMode='not_empty'" />
     </parameters>
     <build-runners>
       <runner name="JasmineSpecRunner" type="jetbrains_powershell">
@@ -22,13 +22,13 @@
 $toolPath = "`"%teamcity.agent.tools.dir%\jasmine-metarunner\bin\phantomjs.exe`"";
 $jasmineVersion = "%teamcity.tool.jasmine.jasmineversion%";
 $jasmineRunnerPath = "`"%teamcity.agent.tools.dir%\jasmine-metarunner\bin\$jasmineVersion\run-jasmine.js`""
-$jasmineSpecFile = "%teamcity.tool.jasmine.specfile%";
+$jasmineSpecFile = "`"%system.teamcity.build.checkoutDir%\%teamcity.tool.jasmine.specfile%`"";
 
 try 
 {
   $command = $jasmineRunnerPath + " " + $jasmineSpecFile;
 
-  $commandToExecute = "& " + $toolPath + $command
+  $commandToExecute = "& " + $toolPath + " " + $command
   
   Write-Host "Command to Execute: " $commandToExecute
 
