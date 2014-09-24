@@ -22,7 +22,7 @@
 $toolPath = "`"%teamcity.agent.tools.dir%\jasmine-metarunner\bin\phantomjs.exe`"";
 $jasmineVersion = "%teamcity.tool.jasmine.jasmineversion%";
 $jasmineRunnerPath = "`"%teamcity.agent.tools.dir%\jasmine-metarunner\bin\$jasmineVersion\run-jasmine.js`""
-$jasmineSpecFile = "`"%system.teamcity.build.checkoutDir%\%teamcity.tool.jasmine.specfile%`"";
+$jasmineSpecFile = "`"%system.teamcity.build.checkoutDir%/%teamcity.tool.jasmine.specfile%`"".Replace("\", "/");
 
 try 
 {
