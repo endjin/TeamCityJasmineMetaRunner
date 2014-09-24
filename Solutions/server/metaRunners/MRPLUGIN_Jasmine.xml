@@ -4,7 +4,7 @@
   <settings>
     <parameters>
       <!-- Mandatory Fields -->
-      <param name="teamcity.tool.jasmine.jasmineversion" value="n/a" spec="select data_1='n/a' data_2='1.3' data_3='2.0' label_2='Jasmine v1.3' label_3='Jasmine v2.0' description='Select the version of Jasmine.' display='normal' label='Jasmine Version'" />
+      <param name="teamcity.tool.jasmine.jasmineversion" value="n/a" spec="select data_1='1.3' data_2='2.0' label_1='Jasmine v1.3' label_2='Jasmine v2.0' description='Select the version of Jasmine.' display='normal' label='Jasmine Version'" />
       <param name="teamcity.tool.jasmine.specfile" value="" spec="text description='Spec file to execute' display='normal' label='Jasmine Spec File' validationMode='not_empty'" />
     </parameters>
     <build-runners>
